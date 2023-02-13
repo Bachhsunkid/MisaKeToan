@@ -19,9 +19,12 @@ let mode = "Add";
 let isMinSidebar = false;
 let id = 0;
 let employee = [];
+let employeeSelectedId = null;
+let employeeSelected = [];
 let unit = [];
 let pageNumber = 1;
 let pageSize = 10;
+let offset = pageNumber-1;
 let totalRecord = null;
 let filter = null;
 
@@ -207,7 +210,7 @@ let resetDataSystem = () => {
 let getData = () => {
     resetDataSystem();
     // Gọi api
-    fetch(`http://localhost:60825/api/v1/Employees/filter?${filter ? `keyword=${filter}` : ''}&limit=${pageSize}&offset=${pageNumber}`, {
+    fetch(`http://localhost:60825/api/v1/Employees/filter?${filter ? `keyword=${filter}` : ''}&limit=${pageSize}&offset=${offset}`, {
         method: "GET",
         headers : { 
             'Content-Type': 'application/json',
@@ -324,6 +327,8 @@ let saveOrEdit = () => {
             ...isValid,
         };
 
+        console.log(tempEmployee);
+
         if (mode === "Add") {
             // Gọi api
             fetch("http://localhost:60825/api/v1/Employees", {
@@ -335,7 +340,6 @@ let saveOrEdit = () => {
             })
                 .then((res) => res.json())
                 .then((res) => {
-                    console.log(res);
                     if (res.devMsg) {
                         openRemind("failed", res.userMsg);
                     }
@@ -391,7 +395,6 @@ let saveOrEdit = () => {
  * Done
  */
 let deleteEmployee = (entityId) => {
-    console.log(entityId);
     // Gọi api
     fetch(`http://localhost:60825/api/v1/Employees/${entityId}`, {
         method: "DELETE",
@@ -416,6 +419,33 @@ let deleteEmployee = (entityId) => {
         });
 };
 
+/**
+ * API: DELETE xóa nhiều nhân viên
+ * Author: TxBach (19/10/2022)
+ * Done
+ */
+let deleteMultipleEmployee = () => {
+        fetch("http://localhost:60825/api/v1/Employees/DeleteBatch", {
+                method: "DELETE",
+                body: JSON.stringify({employeeIDs: employeeSelected}),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+                .then((res) => {
+                    console.log(res);
+                    if (res.status !== 204 && res.status !== 200) {
+                        openRemind("failed", res.statusText);
+                    } else {
+                        openRemind("success", "Xóa thành công nhân viên.");
+                        loadData();
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        
+};
 /**
  * Xử lý khi nhập vào ô input search
  * Author: TxBach (23/10/2022)
@@ -954,8 +984,15 @@ let clickARow = () => {
     $$('tbody input[type="checkbox"]').forEach((ip) => {
         ip.addEventListener("click", () => {
             let tr = ip.parentNode.parentNode;
+            let rowCode = tr.querySelector("td:nth-child(2)").innerText;
             if (ip.checked == true) {
                 count++;
+                employee.forEach(e => {
+                    if(e.EmployeeCode == rowCode){
+                        employeeSelectedId = e.EmployeeId;
+                        employeeSelected.push(employeeSelectedId);
+                    }
+                });
                 tr.classList.add("tr-active");
                 tr.querySelector("td:nth-child(1)").style.backgroundColor =
                     "var(--teal-50)";
@@ -972,6 +1009,7 @@ let clickARow = () => {
                 }
             } else {
                 count--;
+                employeeSelected.pop(employeeSelectedId);
                 tr.querySelector("td:nth-child(1)").style.backgroundColor =
                     "white";
                 tr.querySelector("td:nth-child(2)").style.backgroundColor =
@@ -987,6 +1025,7 @@ let clickARow = () => {
             numberChecked.innerText = count;
         });
     });
+    
 };
 
 /**
@@ -1188,6 +1227,8 @@ let clickEdit = () => {
     });
 };
 
+
+
 /**
  * Xử lý sự kiện click "Xóa" hết trên toolbar
  * Author: TxBach (13/10/2022)
@@ -1224,6 +1265,7 @@ let deleteAllRows = () => {
                 }
             }
         );
+        deleteMultipleEmployee();
         c -= count;
         $(".content-above__left").style.visibility = "hidden";
         numberChecked.innerText = count = 0;
@@ -1610,17 +1652,20 @@ let validate = () => {
     return {
         employeeCode: code,
         employeeName: name,
+        departmentId: getUnitId(dr),
+        departmentName: dr,
+        positionName: $(".textfield-title .textfield__input").value,
         gender: $("#textfield__checkbox-male").checked
             ? 1
             : $("#textfield__checkbox-female").checked
             ? 0
             : 2,
-        dateOfBirth: dob ? new Date(dob) : null,
+        dateOfBirth: dob, //? new Date(dob) : null
         phoneNumber: phoneNum,
         email: email,
         address: $(".textfield-first-block .textfield__input").value,
         identityNumber: userId,
-        identityDate: date ? new Date(date) : null,
+        identityDate: date, //? new Date(date) : null
         identityPlace: $(".textfield-location .textfield__input").value,
         telephoneNumber: phone,
         bankAccountNumber: $(
@@ -1632,9 +1677,8 @@ let validate = () => {
         bankBranchName: $(
             ".textfield-third-block .textfield:nth-child(3) .textfield__input"
         ).value,
-        departmentName: dr,
-        departmentId: getUnitId(dr),
-        employeePosition: $(".textfield-title .textfield__input").value,
+        createdBy: $(".header__right-end-name").innerText,
+        modifiedBy: $(".header__right-end-name").innerText,
     };
 };
 
