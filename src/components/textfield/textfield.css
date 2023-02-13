@@ -1,0 +1,75 @@
+.textfield {
+    position: relative;
+}
+
+.textfield__label p {
+    font-weight: 500;
+}
+
+.textfield__input {
+	width: 300px;
+	height: 36px;
+	padding: 0px 12px;
+	border-radius: 4px;
+	border: 1px solid #e6e6e6;
+}
+
+.textfield__input::placeholder {
+	color: #999999;
+  	font-size: 14px;
+}
+
+.textfield__input:hover {
+	background-color: #F6F6F6;
+  	cursor: pointer;
+}
+
+.textfield__input:focus {
+	border: 1px solid var(--primary-color);
+  	outline: none;
+}
+
+.textfield__desc {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    display: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.textfield.error .textfield__input {
+	border: 1px solid #E61D1D;
+}
+
+.textfield.error .textfield__desc {
+    display: block;
+    color: #E61D1D;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.textfield.readonly .textfield__input {
+    background: #EBEBEB;
+    border-color: #E0E0E0;
+    cursor: default;
+}
+
+.textfield.validate .textfield__input,
+.textfield.verifying .textfield__input {
+    border-color: var(--primary-color);
+}
+
+.textfield__wrap {
+    position: relative;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.textfield__wrap [class|=icon] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+}

@@ -1,0 +1,90 @@
+.noti__remind-wrap,
+.noti__remind-status,
+.noti__remind-action {
+    display: flex;
+}
+
+.noti__remind-action {
+    margin-left: 60px;
+}
+
+.noti__remind-wrap {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.noti__remind {
+    background: white;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+    min-width: 450px;
+    max-width: 650px;
+    display: inline-block;
+    min-height: 56px;
+    border-radius: 3px;
+    padding: 16px;
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 10 !important;
+}
+
+.noti__remind-msg {
+    color: var(--primary-text);
+    margin-left: 8px;
+    max-width: 460px;
+}
+
+.noti__remind-status.success,
+.noti__remind-status.success .noti__remind-text {
+    color: var(--success-color);
+}
+
+.noti__remind-status.failed,
+.noti__remind-status.failed .noti__remind-text {
+    color: var(--failed-color);
+}
+
+.noti__remind-status.warning,
+.noti__remind-status.warning .noti__remind-text {
+    color: var(--warning-color);
+}
+
+.noti__remind-status.info,
+.noti__remind-status.info .noti__remind-text {
+    color: var(--info-color);
+}
+
+.noti__remind-icon {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.noti__remind-text {
+    font-weight: 500;
+}
+
+.noti__remind-act {
+    text-decoration: underline;
+    font-weight: 500;
+    display: block;
+    color: var(--primary-text);
+    cursor: pointer;
+}
+
+.noti__remind-action-icon {
+    width: 24px;
+    height: 24px;
+    text-align: right;
+    cursor: pointer;
+    margin-left: 4px;
+    font-size: 20px;
+    color: var(--disable-color);
+}
+
+.noti__remind-link {
+    color: var(--primary-text);
+}

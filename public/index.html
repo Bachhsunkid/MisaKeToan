@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+        <title>AMIS Kế toán - MISA</title>
+        <link rel="stylesheet" href="../src/assets/css/main.css" />
+        <link rel="stylesheet" href="../src/assets/css/style.css" />
+        <link rel="stylesheet" href="../src/assets/css/responsive.css" />
+        <!-- Link font awesome -->
+        <script src="../src/assets/icon/ef6eeeb025.js"></script>
+        <!-- Link jquery -->
+        <script src="../src/lib/jquery/jquery-3.6.1.min.js"></script>
+    </head>
+    <body>
+        <!-- Begin header -->
+        <header class="row unselect">
+            <div class="header__left row">
+                <div class="header__left-icon icon-multi"></div>
+                <div class="header__left-logo">
+                    <img
+                        src="../src/assets/img/Logo_Module_TiengViet_White.66947422.svg"
+                        alt="Logo"
+                    />
+                </div>
+                <div class="header__left-name">Kế toán</div>
+            </div>
+            <div class="header__right row">
+                <div class="header__right-start row">
+                    <div class="header__right-wrap row">
+                        <div class="header__right-icon icon-min-sidebar"></div>
+                        <div class="tooltip">Thu gọn menu</div>
+                    </div>
+                    <div class="header__right-start-wrap row">
+                        <span class="header__right-start-text">
+                            CÔNG TY TNHH SẢN XUẤT - THƯƠNG MẠI - DỊCH VỤ QUI
+                            PHÚC
+                        </span>
+                        <i class="fa-solid fa-chevron-down unselect"></i>
+                    </div>
+                </div>
+                <div class="header__right-end row">
+                    <div class="icon-wrap">
+                        <div class="icon-bell"></div>
+                        <div class="tooltip">Thông báo</div>
+                    </div>
+                    <div class="header__right-end-wrap row">
+                        <div class="icon-user"></div>
+                        <span class="header__right-end-name"
+                            >Nguyễn Ngọc Hiệp</span
+                        >
+                        <div class="icon-down-small"></div>
+                    </div>
+                </div>
+                <!-- Menu on mobile -->
+                <div class="header__right-mobile">Menu</div>
+            </div>
+        </header>
+        <!-- End header -->
+        <!-- Begin main -->
+        <main class="row">
+            <!-- Begin sidebar -->
+            <div class="sidebar__wrap">
+                <div class="sidebar unselect">
+                    <ul class="sidebar__list">
+                        <li title="" class="sidebar__item row active">
+                            <div class="icon-overview" val="Tổng quan"></div>
+                            <div class="tooltip">Tổng quan</div>
+                            <span class="sidebar__item-text"> Tổng quan </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div class="icon-cash" val="Tiền mặt"></div>
+                            <div class="tooltip">Tiền mặt</div>
+                            <span class="sidebar__item-text"> Tiền mặt </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div class="icon-sent-money" val="Tiền gửi"></div>
+                            <div class="tooltip">Tiền gửi</div>
+                            <span class="sidebar__item-text"> Tiền gửi </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div class="icon-buying" val="Mua hàng"></div>
+                            <div class="tooltip">Mua hàng</div>
+                            <span class="sidebar__item-text"> Mua hàng </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div class="icon-selling" val="Bán hàng"></div>
+                            <div class="tooltip">Bán hàng</div>
+                            <span class="sidebar__item-text"> Bán hàng </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div
+                                class="icon-bill-mangament"
+                                val="Quản lý hóa đơn"
+                            ></div>
+                            <div class="tooltip">Quản lý hóa đơn</div>
+                            <span class="sidebar__item-text">
+                                Quản lý hóa đơn
+                            </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div class="icon-storage" val="Kho"></div>
+                            <div class="tooltip">Kho</div>
+                            <span class="sidebar__item-text"> Kho </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div class="icon-tools" val="Công cụ dụng cụ"></div>
+                            <div class="tooltip">Công cụ dụng cụ</div>
+                            <span class="sidebar__item-text">
+                                Công cụ dụng cụ
+                            </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div
+                                class="icon-assets"
+                                val="Tài sản cố định"
+                            ></div>
+                            <div class="tooltip">Tài sản cố định</div>
+                            <span class="sidebar__item-text">
+                                Tài sản cố định
+                            </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div class="icon-tax" val="Thuế"></div>
+                            <div class="tooltip">Thuế</div>
+                            <span class="sidebar__item-text"> Thuế </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div class="icon-price" val="Giá thành"></div>
+                            <div class="tooltip">Giá thành</div>
+                            <span class="sidebar__item-text"> Giá thành </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div class="icon-total" val="Tổng hợp"></div>
+                            <div class="tooltip">Tổng hợp</div>
+                            <span class="sidebar__item-text"> Tổng hợp </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div class="icon-wallet" val="Ngân sách"></div>
+                            <div class="tooltip">Ngân sách</div>
+                            <span class="sidebar__item-text"> Ngân sách </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div class="icon-report" val="Báo cáo"></div>
+                            <div class="tooltip">Báo cáo</div>
+                            <span class="sidebar__item-text"> Báo cáo </span>
+                        </li>
+                        <li title="" class="sidebar__item row">
+                            <div
+                                class="icon-anal-finance"
+                                val="Phân tích tài chính"
+                            ></div>
+                            <div class="tooltip">Phân tích tài chính</div>
+                            <span class="sidebar__item-text">
+                                Phân tích tài chính
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End sidebar -->
+            <!-- Begin content -->
+            <div class="content">
+                <!-- Begin toolbar -->
+                <div class="toolbar row">
+                    <div class="toolbar__title">Nhân viên</div>
+                    <div class="btn success toolbar__add">
+                        Thêm mới nhân viên
+                    </div>
+                </div>
+                <!-- End toolbar -->
+                <!-- Begin main content -->
+                <div class="main__content">
+                    <div class="main__content-above row">
+                        <div class="content-above__left row">
+                            <div class="content-above__left-text">
+                                <span>Đã chọn </span>
+                                <span class="content-above__left-number"
+                                    >0</span
+                                >
+                            </div>
+                            <div class="content-above__left-hidden row">
+                                <p class="content-above__left-cancel unselect">
+                                    Bỏ chọn
+                                </p>
+                                <button class="btn failed btn-delete">
+                                    Xóa
+                                </button>
+                            </div>
+                        </div>
+                        <div class="content-above__right row">
+                            <div class="textfield search">
+                                <div class="textfield__wrap">
+                                    <input
+                                        type="text"
+                                        class="textfield__input"
+                                        placeholder="Tìm theo mã, tên nhân viên"
+                                    />
+                                    <div class="icon-search"></div>
+                                </div>
+                            </div>
+                            <div class="main__content-wrap">
+                                <div class="icon-refresh"></div>
+                                <div class="tooltip">Lấy lại dữ liệu</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Begin loading -->
+                    <div class="wrap-loading">
+                        <div class="wrap-loading-content">
+                            <div class="loading"></div>
+                        </div>
+                    </div>
+                    <!-- End loading -->
+                    <div class="main__content-below">
+                        <!-- Begin table -->
+                        <div class="main__content-below-wrap-table">
+                            <table class="main__content-table">
+                                <thead class="unselect">
+                                    <tr>
+                                        <th><input type="checkbox" /></th>
+                                        <th>Mã nhân viên</th>
+                                        <th>Tên nhân viên</th>
+                                        <th>Giới tính</th>
+                                        <th>Ngày sinh</th>
+                                        <th title="Số chứng minh nhân dân">
+                                            Số cmnd
+                                        </th>
+                                        <th>Chức danh</th>
+                                        <th>Tên đơn vị</th>
+                                        <th>Số tài khoản</th>
+                                        <th>Tên ngân hàng</th>
+                                        <th
+                                            title="Chi nhánh tài khoản ngân hàng"
+                                        >
+                                            Chi nhánh tk ngân hàng
+                                        </th>
+                                        <th>Chức năng</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <!-- End table -->
+                        <!-- Begin pagination -->
+                        <div class="main__content-pagination row">
+                            <div class="pagination__left">
+                                <span>Tổng: </span>
+                                <span class="pagination__left-total">0</span>
+                            </div>
+                            <div class="pagination__right row">
+                                <span>Số bản ghi/trang: </span>
+                                <div id="dropdown" class="dropdown-pagination">
+                                    <div class="dropdown__wrap">
+                                        <div class="dropdown">
+                                            <span class="dropdown__title"
+                                                >10</span
+                                            >
+                                            <i
+                                                class="fa-solid fa-chevron-down"
+                                            ></i>
+                                        </div>
+                                        <ul class="options">
+                                            <div class="options__wrap">
+                                                <li class="option active">
+                                                    10<i
+                                                        class="fa-solid fa-check"
+                                                    ></i>
+                                                </li>
+                                                <li class="option">25</li>
+                                                <li class="option">50</li>
+                                                <li class="option">100</li>
+                                            </div>
+                                            <div class="overlay-op"></div>
+                                        </ul>
+                                        <p class="dropdown__desc">
+                                            Error message
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="pagination__right-number row">
+                                    <div class="pagination__right-num-wrap row">
+                                        <span class="pagination__right-num"
+                                            >1 - 10
+                                        </span>
+                                        <span>bản ghi</span>
+                                    </div>
+                                </div>
+                                <div class="pagination__right-control-wrap row">
+                                    <div
+                                        class="pagination__right-control-prev disabled"
+                                    >
+                                        <div
+                                            class="icon-arrow-left-disabled"
+                                        ></div>
+                                    </div>
+                                    <div class="pagination__right-control-next">
+                                        <div class="icon-arrow-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End pagination -->
+                    </div>
+                </div>
+                <!-- End main content -->
+            </div>
+            <!-- End content -->
+        </main>
+        <!-- End main -->
+        <!-- Begin popup -->
+        <div class="overlay"></div>
+        <div class="wrap-popup">
+            <div class="popup">
+                <!-- Begin form -->
+                <form action="" method="POST">
+                    <div class="popup__header row">
+                        <div class="popup__header-left row">
+                            <h1>Thông tin nhân viên</h1>
+                            <div class="popup__checkbox-group row">
+                                <input
+                                    id="popup__checkbox-cus"
+                                    type="checkbox"
+                                    tabindex="22"
+                                    name=""
+                                />
+                                <label for="popup__checkbox-cus"
+                                    >Là khách hàng</label
+                                >
+                            </div>
+                            <div class="popup__checkbox-group row">
+                                <input
+                                    type="checkbox"
+                                    tabindex="23"
+                                    name=""
+                                    id="popup__checkbox-sel"
+                                />
+                                <label for="popup__checkbox-sel"
+                                    >Là nhà cung cấp</label
+                                >
+                            </div>
+                        </div>
+                        <div class="popup__header-right row">
+                            <div class="icon-wrap">
+                                <div class="icon-support"></div>
+                                <div class="tooltip">Giúp (F1)</div>
+                            </div>
+                            <div class="icon-wrap">
+                                <div class="icon-cancel"></div>
+                                <div class="tooltip">Đóng (ESC)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__content">
+                        <div class="row popup__content-above">
+                            <div class="popup__content-first-block">
+                                <div class="row">
+                                    <div class="textfield textfield-code">
+                                        <label class="textfield__label">
+                                            <p>
+                                                Mã
+                                                <span class="must-fill">*</span>
+                                            </p>
+                                            <div class="textfield__wrap">
+                                                <input
+                                                    tabindex="1"
+                                                    type="text"
+                                                    class="textfield__input"
+                                                    placeholder=""
+                                                    required
+                                                />
+                                            </div>
+                                        </label>
+                                        <p class="textfield__desc">
+                                            &lt;Tên trường&gt; không được để
+                                            trống
+                                        </p>
+                                    </div>
+                                    <div class="textfield textfield-name">
+                                        <label class="textfield__label">
+                                            <p>
+                                                Tên
+                                                <span class="must-fill">*</span>
+                                            </p>
+                                            <div class="textfield__wrap">
+                                                <input
+                                                    tabindex="2"
+                                                    type="text"
+                                                    class="textfield__input"
+                                                    placeholder=""
+                                                    required
+                                                />
+                                            </div>
+                                        </label>
+                                        <p class="textfield__desc">
+                                            &lt;Tên trường&gt; không được để
+                                            trống
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="dropdown" class="dropdown-unit row">
+                                    <div class="dropdown__label">
+                                        Đơn vị <span class="must-fill">*</span>
+                                    </div>
+                                    <div class="dropdown__wrap" tabindex="3">
+                                        <div class="dropdown">
+                                            <span class="dropdown__title"
+                                                >Đơn vị</span
+                                            >
+                                            <div class="icon-black-down"></div>
+                                        </div>
+                                        <ul class="options">
+                                            <div class="options__wrap">
+                                                <li class="option active">
+                                                    <span>Đơn vị</span>
+                                                    <i
+                                                        class="fa-solid fa-check"
+                                                    ></i>
+                                                </li>
+                                            </div>
+                                            <div class="overlay-op"></div>
+                                        </ul>
+                                        <p class="dropdown__desc">
+                                            Error message
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="textfield textfield-title">
+                                    <label class="textfield__label">
+                                        <p>Chức danh</p>
+                                        <div class="textfield__wrap">
+                                            <input
+                                                tabindex="4"
+                                                type="text"
+                                                class="textfield__input"
+                                                placeholder=""
+                                            />
+                                        </div>
+                                    </label>
+                                    <p class="textfield__desc">
+                                        &lt;Tên trường&gt; không được để trống
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="popup__content-second-block">
+                                <div class="row">
+                                    <div class="textfield textfield-dob">
+                                        <label class="textfield__label">
+                                            <p>Ngày sinh</p>
+                                            <div
+                                                class="textfield__wrap"
+                                                tabindex="5"
+                                            >
+                                                <input
+                                                    type="date"
+                                                    class="textfield__input"
+                                                    placeholder=""
+                                                />
+                                            </div>
+                                        </label>
+                                        <p class="textfield__desc">
+                                            &lt;Tên trường&gt; không được để
+                                            trống
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="textfield textfield__checkbox textfield-gender"
+                                    >
+                                        <label class="textfield__label">
+                                            <p>Giới tính</p>
+                                            <div class="textfield__wrap">
+                                                <div
+                                                    class="textfield__checkbox-wrap row"
+                                                >
+                                                    <div
+                                                        class="textfield__checkbox-group row"
+                                                        tabindex="6"
+                                                    >
+                                                        <input
+                                                            type="radio"
+                                                            name="gender"
+                                                            id="textfield__checkbox-male"
+                                                            checked
+                                                        />
+                                                        <label
+                                                            for="textfield__checkbox-male"
+                                                            >Nam</label
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        class="textfield__checkbox-group row"
+                                                        tabindex="7"
+                                                    >
+                                                        <input
+                                                            type="radio"
+                                                            name="gender"
+                                                            id="textfield__checkbox-female"
+                                                        />
+                                                        <label
+                                                            for="textfield__checkbox-female"
+                                                            >Nữ</label
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        class="textfield__checkbox-group row"
+                                                        tabindex="8"
+                                                    >
+                                                        <input
+                                                            type="radio"
+                                                            name="gender"
+                                                            id="textfield__checkbox-other"
+                                                        />
+                                                        <label
+                                                            for="textfield__checkbox-other"
+                                                            >Khác</label
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="textfield textfield-id">
+                                        <label class="textfield__label">
+                                            <p title="Số chứng minh nhân dân">
+                                                Số CMND
+                                            </p>
+                                            <div class="textfield__wrap">
+                                                <input
+                                                    tabindex="9"
+                                                    type="text"
+                                                    class="textfield__input"
+                                                    placeholder=""
+                                                />
+                                            </div>
+                                        </label>
+                                        <p class="textfield__desc">
+                                            &lt;Tên trường&gt; không được để
+                                            trống
+                                        </p>
+                                    </div>
+                                    <div class="textfield textfield-date">
+                                        <label class="textfield__label">
+                                            <p>Ngày cấp</p>
+                                            <div
+                                                class="textfield__wrap"
+                                                tabindex="10"
+                                            >
+                                                <input
+                                                    type="date"
+                                                    class="textfield__input"
+                                                    placeholder=""
+                                                />
+                                            </div>
+                                        </label>
+                                        <p class="textfield__desc">
+                                            &lt;Tên trường&gt; không được để
+                                            trống
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="textfield textfield-location">
+                                    <label class="textfield__label">
+                                        <p>Nơi cấp</p>
+                                        <div class="textfield__wrap">
+                                            <input
+                                                tabindex="11"
+                                                type="text"
+                                                class="textfield__input"
+                                                placeholder=""
+                                            />
+                                        </div>
+                                    </label>
+                                    <p class="textfield__desc">
+                                        &lt;Tên trường&gt; không được để trống
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup__content-below">
+                            <div class="textfield textfield-first-block">
+                                <label class="textfield__label">
+                                    <p>Địa chỉ</p>
+                                    <div class="textfield__wrap">
+                                        <input
+                                            tabindex="12"
+                                            type="text"
+                                            class="textfield__input"
+                                            placeholder=""
+                                        />
+                                    </div>
+                                </label>
+                                <p class="textfield__desc">
+                                    &lt;Tên trường&gt; không được để trống
+                                </p>
+                            </div>
+                            <div class="textfield-second-block">
+                                <div class="row">
+                                    <div class="textfield">
+                                        <label class="textfield__label">
+                                            <p title="Điện thoại di động">
+                                                ĐT di động
+                                            </p>
+                                            <div class="textfield__wrap">
+                                                <input
+                                                    tabindex="13"
+                                                    type="text"
+                                                    class="textfield__input"
+                                                    placeholder=""
+                                                />
+                                            </div>
+                                        </label>
+                                        <p class="textfield__desc">
+                                            &lt;Tên trường&gt; không được để
+                                            trống
+                                        </p>
+                                    </div>
+                                    <div class="textfield">
+                                        <label class="textfield__label">
+                                            <p title="Điện thoại cố định">
+                                                ĐT cố định
+                                            </p>
+                                            <div class="textfield__wrap">
+                                                <input
+                                                    tabindex="14"
+                                                    type="text"
+                                                    class="textfield__input"
+                                                    placeholder=""
+                                                />
+                                            </div>
+                                        </label>
+                                        <p class="textfield__desc">
+                                            &lt;Tên trường&gt; không được để
+                                            trống
+                                        </p>
+                                    </div>
+                                    <div class="textfield">
+                                        <label class="textfield__label">
+                                            <p>Email</p>
+                                            <div class="textfield__wrap">
+                                                <input
+                                                    tabindex="15"
+                                                    type="text"
+                                                    class="textfield__input"
+                                                    placeholder=""
+                                                />
+                                            </div>
+                                        </label>
+                                        <p class="textfield__desc">
+                                            &lt;Tên trường&gt; không được để
+                                            trống
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="textfield-third-block">
+                                <div class="row">
+                                    <div class="textfield">
+                                        <label class="textfield__label">
+                                            <p>Tài khoản ngân hàng</p>
+                                            <div class="textfield__wrap">
+                                                <input
+                                                    tabindex="16"
+                                                    type="text"
+                                                    class="textfield__input"
+                                                    placeholder=""
+                                                />
+                                            </div>
+                                        </label>
+                                        <p class="textfield__desc">
+                                            &lt;Tên trường&gt; không được để
+                                            trống
+                                        </p>
+                                    </div>
+                                    <div class="textfield">
+                                        <label class="textfield__label">
+                                            <p>Tên ngân hàng</p>
+                                            <div class="textfield__wrap">
+                                                <input
+                                                    tabindex="17"
+                                                    type="text"
+                                                    class="textfield__input"
+                                                    placeholder=""
+                                                />
+                                            </div>
+                                        </label>
+                                        <p class="textfield__desc">
+                                            &lt;Tên trường&gt; không được để
+                                            trống
+                                        </p>
+                                    </div>
+                                    <div class="textfield">
+                                        <label class="textfield__label">
+                                            <p>Chi nhánh</p>
+                                            <div class="textfield__wrap">
+                                                <input
+                                                    tabindex="18"
+                                                    type="text"
+                                                    class="textfield__input"
+                                                    placeholder=""
+                                                />
+                                            </div>
+                                        </label>
+                                        <p class="textfield__desc">
+                                            &lt;Tên trường&gt; không được để
+                                            trống
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__footer row">
+                        <div class="popup__footer-left">
+                            <div class="btn popup__btn-cancel" tabindex="21">
+                                Hủy
+                            </div>
+                        </div>
+                        <div class="popup__footer-right row">
+                            <div class="btn" tabindex="20">Cất</div>
+                            <div
+                                class="btn success popup__btn-save"
+                                tabindex="19"
+                            >
+                                Cất và Thêm
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- End form -->
+            </div>
+        </div>
+        <!-- End popup -->
+        <!-- Begin remind -->
+        <div class="noti__remind">
+            <div class="noti__remind-wrap">
+                <div class="noti__remind-wrap-info">
+                    <div class="noti__remind-status failed">
+                        <div class="noti__remind-icon">
+                            <!-- <i class="fa-solid fa-circle-check"></i> -->
+                            <!-- <i class="fa-solid fa-circle-xmark"></i> -->
+                            <!-- <i class="fa-solid fa-circle-info"></i> -->
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <div class="noti__remind-msg">
+                            <span class="noti__remind-text">Lỗi!</span>
+                            <span>Xóa thất bại.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="noti__remind-action">
+                    <div class="noti__remind-act">Hoàn tác</div>
+                    <div class="noti__remind-action-icon">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End remind -->
+        <!-- Begin notification -->
+        <div class="noti__action noti__action-delete">
+            <div class="noti__action-header">
+                <div class="noti__action-header-title">Xóa nhân viên</div>
+                <div class="noti__action-header-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="noti__action-content">
+                <p>Các nhân viên bạn đang chọn sẽ bị xóa?</p>
+            </div>
+            <div class="noti__action-footer">
+                <button class="btn">Hủy bỏ</button>
+                <button class="btn failed">Xóa</button>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <!-- End notification -->
+        <!-- Begin context menu -->
+        <div class="right__click">
+            <ul class="right__click-list">
+                <li class="right__click-item row">
+                    <div class="icon-history"></div>
+                    History
+                </li>
+                <li class="right__click-item row">
+                    <i class="fa-solid fa-download"></i>
+                    Downloads
+                </li>
+                <li class="right__click-item row">
+                    <i class="fa-regular fa-bookmark"></i>
+                    Bookmarks
+                </li>
+                <li class="right__click-item row">
+                    <div class="icon-recent-tab"></div>
+                    Recent tabs
+                </li>
+                <hr />
+                <li class="right__click-item row">
+                    <div class="icon-share"></div>
+                    Share
+                </li>
+                <li class="right__click-item row">
+                    <div class="icon-setting"></div>
+                    Settings
+                </li>
+            </ul>
+        </div>
+        <!-- End context menu -->
+        <!-- Link main script -->
+        <script src="../src/assets/js/script.js"></script>
+    </body>
+</html>

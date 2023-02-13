@@ -1,0 +1,297 @@
+/* Icons */
+.icon-multi,
+.icon-overview,
+.icon-cash,
+.icon-sent-money,
+.icon-buying,
+.icon-selling,
+.icon-bill-mangament,
+.icon-storage,
+.icon-tools,
+.icon-assets,
+.icon-tax,
+.icon-price,
+.icon-total,
+.icon-wallet,
+.icon-report,
+.icon-anal-finance,
+.icon-min-sidebar,
+.icon-bell,
+.icon-down-small,
+.icon-user,
+.icon-search,
+.icon-refresh,
+.icon-blue-down,
+.icon-arrow-left,
+.icon-arrow-right,
+.icon-bars,
+.icon-setting,
+.icon-share,
+.icon-history,
+.icon-download,
+.icon-recent-tab,
+.icon-black-down,
+.icon-support,
+.icon-cancel,
+.icon-arrow-left-disabled,
+.icon-arrow-right-disabled {
+    background: url(../icon/Sprites.64af8f61.svg);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.icon-min-sidebar:hover,
+.icon-bell:hover,
+.icon-down-small:hover,
+.icon-user:hover,
+.icon-refresh:hover,
+.icon-arrow-left:hover,
+.icon-arrow-right:hover,
+.icon-bars:hover {
+    opacity: 1;
+}
+
+.icon-multi {
+    background-position: -428px -92px;
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+}
+
+.icon-multi:hover {
+    opacity: 0.8;
+}
+
+.icon-overview {
+    background-position: -33px -1587px;
+    width: 18px;
+    height: 20px;
+}
+
+.icon-cash {
+    background-position: -78px -1588px;
+    width: 14px;
+    height: 18px;
+}
+
+.icon-sent-money {
+    background-position: -121px -1590px;
+    width: 16px;
+    height: 16px;
+}
+
+.icon-buying {
+    background-position: -165px -1589px;
+    width: 16px;
+    height: 18px;
+}
+
+.icon-selling {
+    background-position: -206px -1588px;
+    width: 20px;
+    height: 20px;
+}
+
+.icon-bill-mangament {
+    background-position: -254px -1589px;
+    width: 14px;
+    height: 17px;
+}
+
+.icon-storage {
+    background-position: -294px -1589px;
+    width: 18px;
+    height: 17px;
+}
+
+.icon-tools {
+    background-position: -339px -1590px;
+    width: 18px;
+    height: 17px;
+}
+
+.icon-assets {
+    background-position: -382px -1589px;
+    width: 17px;
+    height: 18px;
+}
+
+.icon-tax {
+    background-position: -427px -1591px;
+    width: 16px;
+    height: 16px;
+}
+
+.icon-price {
+    background-position: -471px -1590px;
+    width: 17px;
+    height: 17px;
+}
+
+.icon-total {
+    background-position: -514px -1590px;
+    width: 15px;
+    height: 16px;
+}
+
+.icon-wallet {
+    background-position: -427px -1664px;
+    width: 16px;
+    height: 16px;
+}
+
+.icon-report {
+    background-position: -552px -1593px;
+    width: 14px;
+    height: 13px;
+}
+
+.icon-anal-finance {
+    background-position: -251px -1667px;
+    width: 17px;
+    height: 14px;
+}
+
+.icon-min-sidebar {
+    background-position: -847px -35px;
+    width: 16px;
+    height: 14px;
+}
+
+.icon-bell {
+    background-position: -788px -30px;
+    width: 22px;
+    height: 25px;
+    margin-right: 24px;
+}
+
+.icon-user {
+    background-position: -352px -894px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.icon-down-small {
+    background-position: -1800px -478px;
+    width: 8px;
+    height: 5px;
+    margin-left: 8px;
+}
+
+.icon-search {
+    background-position: -992px -360px;
+    width: 16px;
+	height: 16px;
+    opacity: 1;
+}
+
+.icon-refresh {
+    background-position: -425px -201px;
+    width: 21px;
+	height: 23px;
+    margin: 0 0 0 14px;
+}
+
+.icon-blue-down {
+    background-position: -900px -365px;
+    width: 8px;
+	height: 5px;
+    opacity: 1;
+}
+
+.icon-black-down {
+    background-position: -564px -365px;
+    width: 8px;
+	height: 5px;
+    opacity: 1;
+}
+
+.icon-arrow-left {
+    background-position: -36px -361px;
+    width: 8px;
+	height: 14px;
+    margin: 0;
+    opacity: 1;
+}
+
+.icon-arrow-right {
+    background-position: -84px -361px;
+    width: 8px;
+	height: 14px;
+    opacity: 1;
+}
+
+.icon-arrow-left-disabled {
+    background-position: -36px -409px;
+    width: 8px;
+	height: 14px;
+    margin: 0;
+    opacity: 1;
+    cursor: default;
+}
+
+.icon-arrow-right-disabled {
+    background-position: -84px -409px;
+    width: 8px;
+	height: 14px;
+    opacity: 1;
+    cursor: default;
+}
+
+.icon-bars {
+    background-position: -316px -37px;
+    width: 16px;
+	height: 14px;
+}
+
+.icon-setting {
+    background-position: -33px -144px;
+    width: 23px;
+	height: 24px;
+    opacity: 1;
+}
+
+.icon-share {
+    background-position: -1210px -32px;
+    width: 20px;
+	height: 21px;
+    opacity: 1;
+}
+
+.icon-history {
+    background-position: -648px -145px; 
+    width: 24px;
+	height: 23px;
+    opacity: 1;
+}
+
+.icon-download {
+    background-position: -1553px -408px;
+	width: 16px;
+	height: 16px;
+    opacity: 1;
+}
+
+.icon-recent-tab {
+    background-position: -1189px -561px;
+	width: 20px;
+	height: 17px;
+    opacity: 1;
+}
+
+.icon-support {
+    background-position: -89px -145px;
+	width: 22px;
+	height: 22px;
+    opacity: 1;
+}
+
+.icon-cancel {
+    background-position: -147px -147px;
+	width: 18px;
+	height: 18px;
+    opacity: 1;
+}

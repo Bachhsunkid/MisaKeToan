@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Width và height tự động bao gồm padding và border */
+}
+
+:root {
+    /* Màu chủ đạo - Teal 500 */
+    --primary-color: #01A38A;
+    --teal-50: #E6F6F3;
+    --teal-200: #99DAD0;
+    --teal-300: #67C8B9;
+    --teal-400: #34B6A2;
+    --teal-700: #016253;
+    --teal-800: #033C1A;
+    --teal-900: #021E0D;
+    --title-color: #000000;
+    --primary-text: #212121;
+    --secondary-text: #666666;
+    --disable-color: #9E9E9E;
+    --border-color: #E0E0E0;
+    --background-color: #F7F7F7;
+    --header-height: 56px;
+    --sidebar-width: 200px;
+    --sidebar-min-width: 56px; 
+    --success-color: #50B83C;
+    --success-lighter: #73C663;
+    --failed-color: #DE3617;
+    --failed-lighter: #EB3333;
+    --warning-color: #F49342;
+    --info-color: #3395FF;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--primary-text);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.unselect {
+    user-select: none;
+}
+
+.must-fill {
+    color: red;
+    font-weight: 700;
+}
+
+::selection {
+    background: var(--primary-color);
+    color: white;
+}

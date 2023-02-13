@@ -1,0 +1,36 @@
+.btn {
+    font-size: 14px;
+    min-width: 80px;
+    height: 36px;
+    background: white;
+    border-radius: 4px;
+    line-height: 18px;
+    border: 1px solid var(--border-color);
+    padding: 0 16px;
+    line-height: 36px;
+    user-select: none;
+    text-align: center;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: var(--border-color);
+}
+
+.btn.success {
+    color: white;
+    background: var(--primary-color);
+}
+
+.btn.success:hover {
+    background: var(--teal-400);
+}
+
+.btn.failed:hover {
+    background: var(--failed-lighter);
+}
+
+.btn.failed {
+    color: white;
+    background: var(--failed-color);
+}
