@@ -24,7 +24,6 @@ let employeeSelected = [];
 let unit = [];
 let pageNumber = 1;
 let pageSize = 10;
-let offset = pageNumber-1;
 let totalRecord = null;
 let filter = null;
 
@@ -138,55 +137,55 @@ $('.content-above__right .textfield__input').addEventListener('change', () =>
  * Author: TxBach (13/10/2022)
  * Done
  */
-let randomData = () => {
-    for (let i = 0; i < 10; i++) {
-        let day = Math.floor(Math.random() * 30 + 1);
-        let month = Math.floor(Math.random() * 12 + 1);
-        $(".main__content-table tbody").innerHTML += `
-            <tr>
-                <td><input type="checkbox" /></td>
-                <td>${i < 9 ? `NV00${i + 1}` : `NV0${i + 1}`}</td>
-                <td>Nhân viên ${String.fromCharCode(i + 65)}</td>
-                <td>${Math.floor(Math.random() * 2) == 0 ? "Nữ" : "Nam"}</td>
-                <td>
-                    ${day < 10 ? `0${day}` : day}/${
-            month < 10 ? `0${month}` : month
-        }/${Math.floor(Math.random() * 3 + 2000)}
-                </td>
-                <td>001${Math.floor(Math.random() * 100000000 + 200000000)}</td>
-                <td>${
-                    Math.floor(Math.random() * 2) == 0 ? "Trưởng" : "Phó"
-                } nhóm</td>
-                <td>Phòng chiến lược</td>
-                <td>10${Math.floor(
-                    Math.random() * 1000000000 + 6000000000
-                )}</td>
-                <td>VPBank</td>
-                <td>Hoàng Mai</td>
-                <td>
-                    <div
-                        class="main__content-table-wrap row"
-                    >
-                        <span>Sửa</span>
-                        <div
-                            class="main__content-label row"
-                        >
-                            <div
-                                class="icon-blue-down"
-                            ></div>
-                        </div>
-                        <ul
-                            class="main__content-function-hidden unselect"
-                        >
-                            <li>Xóa</li>
-                        </ul>
-                        <div class="overlay-func"></div>
-                    </div>
-                </td>
-            </tr>
-        `;
-    }
-};
+// let randomData = () => {
+//     for (let i = 0; i < 10; i++) {
+//         let day = Math.floor(Math.random() * 30 + 1);
+//         let month = Math.floor(Math.random() * 12 + 1);
+//         $(".main__content-table tbody").innerHTML += `
+//             <tr>
+//                 <td><input type="checkbox" /></td>
+//                 <td>${i < 9 ? `NV00${i + 1}` : `NV0${i + 1}`}</td>
+//                 <td>Nhân viên ${String.fromCharCode(i + 65)}</td>
+//                 <td>${Math.floor(Math.random() * 2) == 0 ? "Nữ" : "Nam"}</td>
+//                 <td>
+//                     ${day < 10 ? `0${day}` : day}/${
+//             month < 10 ? `0${month}` : month
+//         }/${Math.floor(Math.random() * 3 + 2000)}
+//                 </td>
+//                 <td>001${Math.floor(Math.random() * 100000000 + 200000000)}</td>
+//                 <td>${
+//                     Math.floor(Math.random() * 2) == 0 ? "Trưởng" : "Phó"
+//                 } nhóm</td>
+//                 <td>Phòng chiến lược</td>
+//                 <td>10${Math.floor(
+//                     Math.random() * 1000000000 + 6000000000
+//                 )}</td>
+//                 <td>VPBank</td>
+//                 <td>Hoàng Mai</td>
+//                 <td>
+//                     <div
+//                         class="main__content-table-wrap row"
+//                     >
+//                         <span>Sửa</span>
+//                         <div
+//                             class="main__content-label row"
+//                         >
+//                             <div
+//                                 class="icon-blue-down"
+//                             ></div>
+//                         </div>
+//                         <ul
+//                             class="main__content-function-hidden unselect"
+//                         >
+//                             <li>Xóa</li>
+//                         </ul>
+//                         <div class="overlay-func"></div>
+//                     </div>
+//                 </td>
+//             </tr>
+//         `;
+//     }
+// };
 
 /**
  * Reset data trong hệ thống
@@ -210,7 +209,7 @@ let resetDataSystem = () => {
 let getData = () => {
     resetDataSystem();
     // Gọi api
-    fetch(`http://localhost:60825/api/v1/Employees/filter?${filter ? `keyword=${filter}` : ''}&limit=${pageSize}&offset=${offset}`, {
+    fetch(`http://localhost:60825/api/v1/Employees/filter?${filter ? `keyword=${filter}` : ''}&limit=${pageSize}&offset=${(pageNumber-1)*pageSize}`, {
         method: "GET",
         headers : { 
             'Content-Type': 'application/json',
